@@ -8,7 +8,7 @@ const Dropdown: FC<DropdownInterface> = (props) => {
       <label  htmlFor={id}>{label}</label>        
       <select  name="currency-names" value={initial} id={id} onChange={(e) => onChange(e.target.value)}>
         {options.map((option) => (   
-          <option key={option} value={option}>{option?.toUpperCase()}</option> // value={opt}
+          <option key={option} value={option}>{option?.toUpperCase()}</option> 
         ))};
       </select>
     </div>
