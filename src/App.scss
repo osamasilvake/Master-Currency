@@ -1,0 +1,53 @@
+body {
+	align-items: center;
+	// background-color: #f7f7f7;
+	background-color: rgb(72, 103, 241);
+	display: flex;
+	font-family: 'Roboto', sans-serif;
+	height: 100vh;
+	justify-content: center;
+	overflow: hidden;
+}
+.cu-converter {
+	background-color: white;
+	box-shadow: 1px 1px 1px #ddd;
+	max-width: 360px;
+	padding: 1.3rem;
+	border-radius: 6px;
+	.cu-app {
+		.cu-heading {
+			text-align: center;
+			h1 {
+				font-weight: 400;
+			}
+		}
+		.cu-currency {
+			.cu-amount {
+				h3 {
+					font-weight: 350;
+					margin-bottom: 0.5rem;
+				}
+				input {
+					height: 2rem;
+					padding: 0.4rem 0.3rem;
+					// border: none;
+					border: 1px solid #999;
+					border-radius: 4px;
+					width: calc(100% - 12px);
+				}
+			}
+			.cu-options {
+				display: flex;
+				justify-content: center;
+				margin: .9rem 0;
+				
+				.icon {
+					font-size: 1.7rem;
+					padding: 0.7rem;
+					margin-top: .6rem;
+					text-align: center;
+				}
+			}
+		}
+	}
+}

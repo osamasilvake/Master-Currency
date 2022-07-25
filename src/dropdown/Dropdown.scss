@@ -1,0 +1,18 @@
+.cu-option {
+    display: flex;
+    align-items: center;
+    label{
+     font-size: 18px;
+     font-weight: 200;
+     margin-right: 0.2rem;
+    //  display: none;
+    @media (max-width:330px) {
+        display: none;
+    }
+    }
+    select{
+        padding: .5rem 0;
+        border-radius: 4px;
+        
+    }
+}
