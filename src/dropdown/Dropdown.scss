@@ -17,17 +17,7 @@
         option {
             font-size: 14px;
             background-color:azure;
-           
-            &:before {
-                content: "^";
-                font-size: 18px;
-                display: none;
-                padding-right: 10px;
-                padding-left: 5px;
-                color: #fff;
-                
-              }
-              
+            
           }
         
     }
