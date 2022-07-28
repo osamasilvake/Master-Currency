@@ -1,17 +1,13 @@
 .cu-option {
-    display: flex;
+    display: inline-grid;
     align-items: center;
     label{
      font-size: 18px;
      font-weight: 200;
      margin-right: 0.2rem;
-    //  display: none;
-    @media (max-width:330px) {
-        display: none;
-    }
     }
     select{
-        padding: .5rem 0;
+        padding: 0.6rem 0.3rem;
         border-radius: 4px;
         background-color: rgb(245, 236, 236);
 				&::-webkit-scrollbar-thumb {
@@ -19,7 +15,7 @@
 				}
 				&::-webkit-scrollbar {
 					width: 12px;
-					background-color: #f0e5e5d5;
+					background-color: #f0e2e2d5;
 
 				}
         option {

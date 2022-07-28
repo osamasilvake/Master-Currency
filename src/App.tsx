@@ -14,8 +14,7 @@ const App = () => {
 	const [from, setFrom] = useState("usd");
 	const [to, setTo] = useState("pkr");
 	const [options, setOptions] = useState<string[]>([]);
-	const [output, setOutput] = useState<number>(210);
-
+	const [output, setOutput] = useState<number>(229);
 	// That means that when the from dependiencies  changes, a render happens, 
 	// which then triggers another effect.
 	useEffect(() => {
@@ -31,8 +30,6 @@ const App = () => {
 		}
 		fetchCurrencies();
 	}, [from]);
-
-
 
 	// whenever  info,input,to   dependenices change useeffect will fire/rerender 
 	useEffect(() => {
@@ -59,7 +56,6 @@ const App = () => {
 						<input type="number" min={0}
 							placeholder="Enter the amount" value={input}
 							onChange={(e: any) => setInput(e.target.value)} />
-
 					</div>
 					<div className="cu-options">
 						<Dropdown id="dropdown-from" label="From" options={options} onChange={(e) => { setFrom(e) }}
