@@ -3,13 +3,13 @@
     align-items: center;
     label{
      font-size: 18px;
-     font-weight: 200;
-     margin-right: 0.2rem;
+     font-weight:400
     }
     select{
-        padding: 0.6rem 0.3rem;
+        padding: 0.6rem 0.4rem;
+        border: 1px solid #999;
         border-radius: 4px;
-        background-color: rgb(245, 236, 236);
+        background-color: rgb(246 246 246 / 84%);
 				&::-webkit-scrollbar-thumb {
 					background-color: rgb(61, 140, 243);       
 				}

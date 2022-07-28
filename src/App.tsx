@@ -40,10 +40,9 @@ const App = () => {
 	// Function to switch between two currency
 	const flip = () => {
 		let convert = from;
-		setTo(convert)
+		setTo(convert);
 		setFrom(to);
 	}
-
 	return (
 		<div className='cu-converter'>
 			<div className="cu-app">
