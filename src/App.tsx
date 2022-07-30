@@ -8,7 +8,7 @@ import { CurrencyInfoInterface, CurrencyInterface } from './App.interface';
 import Result from './result/Result';
 import { HiSwitchHorizontal } from 'react-icons/hi';
 
-const App = () => {
+    const App = () => {
 	const [fetchdata, setFetchdata] = useState<CurrencyInfoInterface>({});
 	const [input, setInput] = useState(100);
 	const [from, setFrom] = useState("usd");
