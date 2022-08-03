@@ -14,13 +14,12 @@ import { HiSwitchHorizontal } from 'react-icons/hi';
 	const [from, setFrom] = useState("usd");
 	const [to, setTo] = useState("pkr");
 	const [options, setOptions] = useState<string[]>([]);
-	const [output, setOutput] = useState<number>(229);
+	const [output, setOutput] = useState<number>(229);	
 	// That means that when the from dependiencies  changes, a render happens, 
 	// which then triggers another effect.
 	useEffect(() => {
 		const fetchCurrencies = async () => {
 			const httpGet = async <T,>(url: string): Promise<T> => {
-				// fetching api  // axios make  get request for browser
 				const api = await Axios.get(url);
 				return api.data as T;
 			}
@@ -30,7 +29,7 @@ import { HiSwitchHorizontal } from 'react-icons/hi';
 		}
 		fetchCurrencies();
 	}, [from]);
-
+	
 	// whenever  info,input,to   dependenices change useeffect will fire/rerender 
 	useEffect(() => {
 		setOptions(Object.keys(fetchdata));
@@ -69,4 +68,4 @@ import { HiSwitchHorizontal } from 'react-icons/hi';
 		</div>
 	);
 };
-export default App;
+export default App; 
