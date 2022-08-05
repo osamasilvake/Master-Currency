@@ -15,4 +15,5 @@ A  currency converter is an online application that enables the easy conversion 
     
 
 ## Libraries and Frameworks
+- [X] [sass](https://https://sass-lang.com/)
 - [X] [TypeScript](https://www.typescriptlang.org/)
