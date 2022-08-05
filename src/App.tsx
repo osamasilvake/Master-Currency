@@ -7,7 +7,6 @@ import Dropdown from './dropdown/Dropdown';
 import { CurrencyInfoInterface, CurrencyInterface } from './App.interface';
 import Result from './result/Result';
 import { HiSwitchHorizontal } from 'react-icons/hi';
-
     const App = () => {
 	const [fetchdata, setFetchdata] = useState<CurrencyInfoInterface>({});
 	const [input, setInput] = useState(100);
@@ -17,7 +16,7 @@ import { HiSwitchHorizontal } from 'react-icons/hi';
 	const [output, setOutput] = useState<number>(229);	
 	// That means that when the from dependiencies  changes, a render happens, 
 	// which then triggers another effect.
-	useEffect(() => {
+	useEffect(() => {	
 		const fetchCurrencies = async () => {
 			const httpGet = async <T,>(url: string): Promise<T> => {
 				const api = await Axios.get(url);
