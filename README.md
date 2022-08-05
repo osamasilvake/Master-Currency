@@ -13,3 +13,8 @@ A  currency converter is an online application that enables the easy conversion 
     - [X] useState
     - [X] useEffect
     
+
+
+## Libraries and Frameworks
+    - [X] typescript
+    - [X] scss
