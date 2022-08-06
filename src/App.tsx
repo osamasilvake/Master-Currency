@@ -1,21 +1,23 @@
 import { useEffect, useState } from 'react';
 import Axios from 'axios';
+import { HiSwitchHorizontal } from 'react-icons/hi';
 import './App.scss';
 import "./dropdown/Dropdown.scss";
-import "./result/Result.scss";
 import Dropdown from './dropdown/Dropdown';
-import { CurrencyInfoInterface, CurrencyInterface } from './App.interface';
 import Result from './result/Result';
-import { HiSwitchHorizontal } from 'react-icons/hi';
+import "./result/Result.scss";
+import { CurrencyInfoInterface, CurrencyInterface } from './App.interface';
+
 // hooks
     const App = () => {
-	const [fetchdata, setFetchdata] = useState<CurrencyInfoInterface>({});
+	const [info, setInfo] = useState<CurrencyInfoInterface>({});
 	const [input, setInput] = useState(100);
 	const [from, setFrom] = useState("usd");
 	const [to, setTo] = useState("pkr");
 	const [options, setOptions] = useState<string[]>([]);
-	const [output, setOutput] = useState<number>(229);	
-	// fetching appi from server
+	const [output, setOutput] = useState<number>(229);
+		
+	// fetching currency api from server
 	useEffect(() => {	
 		const fetchCurrencies = async () => {
 			const httpGet = async <T,>(url: string): Promise<T> => {
@@ -24,16 +26,16 @@ import { HiSwitchHorizontal } from 'react-icons/hi';
 			}
 			const response = await httpGet<CurrencyInterface>
 				(`https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${from}.json`);
-			setFetchdata(response[from]);
+			setInfo(response[from]);
 		}
 		fetchCurrencies();
 	}, [from]);
 	
 	// whenever  info,input,to   dependenices change useeffect will fire/rerender 
 	useEffect(() => {
-		setOptions(Object.keys(fetchdata));
-		setOutput(input * fetchdata[to]);
-	}, [fetchdata, input, to])
+		setOptions(Object.keys(info));
+		setOutput(input * info[to]);
+	}, [info, input, to])
 
 	// Function to switch between two currency
 	const flip = () => {
