@@ -18,17 +18,20 @@ const App = () => {
 	const [output, setOutput] = useState<number>(229);
 
 	// fetching currency api from server
-	useEffect(() => {
-		const fetchCurrencies = async () => {
-			const httpGet = async <T,>(url: string): Promise<T> => {
-				const api = await Axios.get(url);
-				return api.data as T;
-			};
-			const response = await httpGet<CurrencyInterface>(
-				`https://cdn.jsdelivr.net/gh/fawazahmed0/currency-api@1/latest/currencies/${from}.json`
-			);
-			setInfo(response[from]);
+	const fetchCurrencies = async () => {
+		const httpGet = async <T,>(url: string): Promise<T> => {
+			const api = await Axios.get(url);
+			return api.data as T;
 		};
+		const response = await httpGet<CurrencyInterface>(
+			`https://cdn.jsdelivr.net/npm/@fawazahmed0/currency-api@latest/v1/currencies/${from}.json`
+		);
+		console.log(response);
+		
+		setInfo(response[from]);
+	};
+	
+	useEffect(() => {
 		fetchCurrencies();
 	}, [from]);
 
