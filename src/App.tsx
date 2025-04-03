@@ -7,6 +7,7 @@ import Dropdown from "./dropdown/Dropdown";
 import Result from "./result/Result";
 import "./result/Result.scss";
 import { CurrencyInfoInterface, CurrencyInterface } from "./App.interface";
+import CurrencyInput from "./currency-input/CurrencyInput";
 
 // hooks
 const App = () => {
@@ -53,16 +54,7 @@ const App = () => {
 					<h1>Currency converter</h1>
 				</div>
 				<div className="cu-currency">
-					<div className="cu-amount">
-						<h3>Amount</h3>
-						<input
-							type="number"
-							min={0}
-							placeholder="Enter the amount"
-							value={input}
-							onChange={(e: any) => setInput(e.target.value)}
-						/>
-					</div>
+				<CurrencyInput input={input} setInput={setInput} />
 					<div className="cu-options">
 						<Dropdown
 							id="dropdown-from"

@@ -1,0 +1,21 @@
+.cu-currency {
+    .cu-amount {
+        h3 {
+            font-weight: 350;
+            margin-bottom: 0.5rem;
+        }
+
+        input {
+            height: 2.2rem;
+            padding: 0.4rem 0.3rem;
+            border: 1px solid #999;
+            border-radius: 4px;
+            width: calc(100% - 12px);
+            background-color: rgb(246 246 246 / 84%);
+            &::placeholder {
+                color: black;
+                font-size: 16px;
+              }
+        }
+        }
+    }
